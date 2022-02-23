@@ -23,8 +23,8 @@ router.register(r'groups', etax.views.GroupViewSet)
 
 urlpatterns = [
 
-    path('register', etax.views.RegisterView.as_view()),
-    path('login', etax.views.LoginView.as_view()),
+    path('api/register', etax.views.RegisterView.as_view()),
+    path('api/login', etax.views.LoginView.as_view()),
     # path('user', etax.views.UserView.as_view()),
     # path('logout', etax.views.LogoutView.as_view()),
 

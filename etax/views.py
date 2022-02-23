@@ -131,7 +131,7 @@ def db(request):
     # greeting.save()
 
     # greetings = Greeting.objects.all()
-    return HttpResponse("bba")
+    return HttpResponse("bba nemlee")
     # return render(request, "db.html", {"greetings": greetings})
 
 def test(request):

@@ -2,7 +2,7 @@ django
 gunicorn
 django-heroku
 django-cors-headers
-
+django-rest-framework
 
 
 

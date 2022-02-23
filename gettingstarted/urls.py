@@ -25,8 +25,8 @@ urlpatterns = [
 
     path('api/register', etax.views.RegisterView.as_view()),
     path('api/login', etax.views.LoginView.as_view()),
-    # path('user', etax.views.UserView.as_view()),
-    # path('logout', etax.views.LogoutView.as_view()),
+    path('api/user', etax.views.UserView.as_view()),
+    path('api/logout', etax.views.LogoutView.as_view()),
 
 
     path('init', etax.views.init),

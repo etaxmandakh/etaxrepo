@@ -2,6 +2,31 @@ from django.db import models
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import User
 
+
+LANGUAGE_CHOICES = (("mn", "mon"), ("eng", "engo"))
+STYLE_CHOICES = (("mn", "mon"), ("eng", "engo"))
+
+
+
+
+
+
+class Snippet(models.Model):
+    created = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=100, blank=True, default='')
+    code = models.TextField()
+    linenos = models.BooleanField(default=False)
+    language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
+    style = models.CharField(choices=STYLE_CHOICES, default='friendly', max_length=100)
+    owner = models.ForeignKey('auth.User', related_name='snippets', on_delete=models.CASCADE, null=True)
+    highlighted = models.TextField( default="")
+
+    class Meta:
+        ordering = ['created']
+
+
+
+
 class Alltables(models.Model):
     craetedDate = models.DateTimeField("date created", null=True, blank=True)
     deletedDate = models.DateTimeField("date created", null=True, blank=True)

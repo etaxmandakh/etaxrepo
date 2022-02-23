@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "etax",
+    'corsheaders',
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,11 @@ STATIC_URL = "/static/"
 
 django_heroku.settings(locals())
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+
+
+
+
+
